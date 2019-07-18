@@ -9,7 +9,7 @@ def load_library(filepath)
   }
   data.each do |key, value|
     new_data["get_meaning"][value[1]] = key
-    new_data["get_meaning"][value[0]] = new_data["get_meaning"][value[1]]
+    new_data["get_emoticon"][value[0]] = value[1]
   end
   new_data
 end
