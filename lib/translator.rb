@@ -7,9 +7,9 @@ def load_library(filepath)
     "get_meaning" => {},
     "get_emoticon" => {}
   }
-  data.keys.each do |key|
-    new_data["get_meaning"][key][1] = key
-    new_data["get_meaning"][key][0] = new_data["get_meaning"][key][1]
+  data.each do |key, value|
+    new_data["get_meaning"][value[1]] = key
+    new_data["get_meaning"][value[0]] = new_data["get_meaning"][value[1]]
   end
   new_data
 end
