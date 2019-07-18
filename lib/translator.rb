@@ -1,7 +1,8 @@
 # require modules here
 
 def load_library(filepath)
-  require_relative filepath
+  require 'yaml'
+  YAML::load_file(filepath)
 end
 
 def get_japanese_emoticon
