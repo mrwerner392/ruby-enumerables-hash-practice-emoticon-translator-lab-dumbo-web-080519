@@ -14,8 +14,13 @@ def load_library(filepath)
   new_data
 end
 
-def get_japanese_emoticon
-  # code goes here
+def get_japanese_emoticon(filepath, emoticon)
+  emoticons = load_library(filepath)
+  emoticons.each do |key, value|
+    if emoticon = value[0]
+      return value[1]
+    end
+  return "Sorry, #{emoticon} is not a known emoticon"
 end
 
 def get_english_meaning
