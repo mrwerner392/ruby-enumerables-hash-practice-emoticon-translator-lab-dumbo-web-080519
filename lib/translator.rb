@@ -1,7 +1,7 @@
 # require modules here
 
 def load_library(filepath)
-  load(filepath)
+  require_relative filepath
 end
 
 def get_japanese_emoticon
